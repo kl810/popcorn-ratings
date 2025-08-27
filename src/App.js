@@ -34,15 +34,25 @@ export default function App() {
   function handleDeleteWatched(id) {
     setWatched((watched) => watched.filter((movie) => movie.imdbID !== id));
   }
+  useEffect(function () {
+    document.addEventListener("keydown", function (e) {
+      if (e.code === "Escape") {
+        handleCloseMovie();
+      }
+    });
+  }, []);
 
   useEffect(() => {
+    const controller = new AbortController(); //Clean up after data fetching
+
     async function fetchMovies() {
       try {
         setIsLoading(true);
         setError(""); //reset error if error was found previously
 
         const res = await fetch(
-          `https://www.omdbapi.com/?apikey=${apiKEY}&s=${query}`
+          `https://www.omdbapi.com/?apikey=${apiKEY}&s=${query}`,
+          { signal: controller.signal }
         );
 
         if (!res.ok) {
@@ -53,9 +63,12 @@ export default function App() {
 
         if (data.Response === "False") throw new Error("Movie not found");
         setMovies(data.Search);
+        setError("");
       } catch (err) {
-        console.error("Fetch failed:", err);
-        setError(err.message);
+        if (err.name !== "AbortError") {
+          console.log(err.message);
+          setError(err.message);
+        }
       } finally {
         setIsLoading(false);
       }
@@ -67,7 +80,12 @@ export default function App() {
       return;
     }
 
+    handleCloseMovie();
     fetchMovies();
+
+    return function () {
+      controller.abort();
+    };
   }, [query]);
 
   return (
