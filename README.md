@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# 🍿 Popcorn Ratings
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Popcorn Ratings is a movie app where users can search for films, rate them, and add them to their watched list. The app is built with React and demonstrates key concepts such as useEffect for data fetching, custom hooks for reusable logic, and dynamic state management.
 
-## Available Scripts
+This project showcases building an interactive, user-friendly interface while handling data flow and side effects efficiently.
 
-In the project directory, you can run:
+![Screenshot of Popcorn Ratings](/public/popcornratings-screenshot.png)
 
-### `npm start`
+Click this link for a live demo: [Popcorn Ratings](https://popcornratings.kyelee.dev/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Overview
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Tech Used:** React, HTML, CSS
 
-### `npm test`
+Popcorn Ratings is a simple and fun movie app where users can:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Search for movies by title.
 
-### `npm run build`
+- Rate movies after watching.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Add movies to a personal "Watched List".
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project demonstrates key React concepts, including:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- useEffect for data fetching and managing side effects.
 
-### `npm run eject`
+- API integration to fetch live movie data.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Custom hooks for cleaner, reusable logic.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The app is designed to provide a smooth user experience for exploring, rating, and keeping track of your movie journey.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Lessons learned
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Through building Popcorn Ratings, I strengthened my understanding of:
 
-## Learn More
+- Using `useEffect` effectively for fetching and updating data.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Handling **async API requests** in React.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Structuring state with `useState` and lifting state up.
 
-### Code Splitting
+- Creating **custom hooks** to keep code modular and reusable.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Managing component re-renders for better performance.
